@@ -101,7 +101,7 @@ SQL commands are grouped into three main categories:
 - `SELECT` → retrieve data for analysis or reporting
 
 
-#####Summary Diagram:
+##### Summary Diagram:
 
 ```plaintext
 
