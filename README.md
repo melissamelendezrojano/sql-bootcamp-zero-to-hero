@@ -72,7 +72,6 @@ Provided by the course instructor
 
 ```plaintext
 sql-bootcamp-zero-to-hero/
-/
 ├── README.md
 ├── 01_introduction/
 │   └── introduction.sql
