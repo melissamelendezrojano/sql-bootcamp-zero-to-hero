@@ -74,7 +74,7 @@ Provided by the course instructor
 sql-bootcamp-zero-to-hero/
 ├── README.md
 ├── 01_introduction/
-│   └── introduction.sql
+│   └── introduction_notes.md
 ├── 02_select_queries/
 │   └── select_basics.sql
 ├── 03_ddl/
