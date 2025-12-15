@@ -73,7 +73,11 @@ Provided by the course instructor
 ```plaintext
 sql-bootcamp-zero-to-hero/
 ├── README.md
+<<<<<<< HEAD
 ├── 01_introduction/
+=======
+├── 01_introduction_to_sql/
+>>>>>>> 2093228 (replace files)
 │   └── introduction_notes.md
 ├── 02_select_queries/
 │   └── select_basics.sql
