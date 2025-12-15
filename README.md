@@ -73,11 +73,7 @@ Provided by the course instructor
 ```plaintext
 sql-bootcamp-zero-to-hero/
 ├── README.md
-<<<<<<< HEAD
-├── 01_introduction/
-=======
 ├── 01_introduction_to_sql/
->>>>>>> 2093228 (replace files)
 │   └── introduction_notes.md
 ├── 02_select_queries/
 │   └── select_basics.sql
@@ -149,28 +145,3 @@ Each module contains:
 -   **Execution Mode:** Local installation
 -   **Platform:** Windows
     
-
-
-<!--
-## Optional Tools
-
-(Click “Raw” in GitHub to see this hidden section)
-
-Optional tools (not currently used)
--   **dbdiagram.io** for schema visualization  
--   **DrawSQL**, **ERD Tools**, or **VS Code ERD extensions**
-
-----------
-
-## Disclaimer / License
-
-This repository contains **my personal notes and practice queries** created while following the Udemy course **“The Complete SQL Bootcamp (30 Hours): Go from Zero to Hero”**, authored by **Baraa Khatib Salkini**.
-
--   I am **not** the author of the course.
-    
--   I do **not** redistribute course materials, videos, or proprietary content.
-    
--   All SQL scripts included here represent my own work derived from exercises demonstrated by the instructor.
-    
--   Sample databases (AdventureWorks, and the additional three course databases) are **not distributed** here and must be obtained from their respective providers.
--->
