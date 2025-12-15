@@ -72,104 +72,62 @@ Provided by the course instructor
 
 ```plaintext
 sql-bootcamp-zero-to-hero/
+/
 ├── README.md
-├── 01_introduction_to_sql/
-│   ├── notes.md
-│   └── exercises.sql
-├── 02_select_query/
-│   ├── notes.md
-│   └── basic_select.sql
+├── 01_introduction/
+│   └── introduction.sql
+├── 02_select_queries/
+│   └── select_basics.sql
 ├── 03_ddl/
-│   ├── notes.md
-│   └── ddl_exercises.sql
+│   └── ddl.sql
 ├── 04_dml/
-│   ├── notes.md
-│   └── dml_exercises.sql
-├── 05_filtering_data/
-│   ├── notes.md
-│   └── filtering_examples.sql
+│   └── dml.sql
+├── 05_filtering/
+│   └── filtering.sql
 ├── 06_joins/
-│   ├── notes.md
-│   ├── inner_join.sql
-│   ├── left_join.sql
-│   ├── right_join.sql
-│   ├── full_join.sql
-│   └── multiple_joins.sql
+│   └── joins.sql
 ├── 07_set_operators/
-│   ├── notes.md
-│   ├── union.sql
-│   ├── intersect.sql
-│   └── except.sql
+│   └── set_operators.sql
 ├── 08_string_functions/
-│   ├── notes.md
 │   └── string_functions.sql
 ├── 09_date_time_functions/
-│   ├── notes.md
-│   └── date_time_examples.sql
-├── 10_null_functions/
-│   ├── notes.md
+│   └── date_time_functions.sql
+├── 10_null_handling/
 │   └── null_handling.sql
 ├── 11_case_statements/
-│   ├── notes.md
-│   └── case_examples.sql
-├── 12_window_functions_basics/
-│   ├── notes.md
-│   └── window_basics.sql
-├── 13_window_aggregate/
-│   ├── notes.md
-│   └── window_aggregate.sql
-├── 14_window_ranking/
-│   ├── notes.md
-│   └── window_ranking.sql
-├── 15_window_value/
-│   ├── notes.md
-│   └── window_value.sql
-├── 16_subqueries/
-│   ├── notes.md
+│   └── case_statements.sql
+├── 12_window_functions/
+│   └── window_functions.sql
+├── 13_subqueries/
 │   └── subqueries.sql
-├── 17_ctes/
-│   ├── notes.md
+├── 14_ctes/
 │   └── ctes.sql
-├── 18_views/
-│   ├── notes.md
+├── 15_views/
 │   └── views.sql
-├── 19_ctas_temp_tables/
-│   ├── notes.md
+├── 16_ctas_temp_tables/
 │   └── ctas_temp_tables.sql
-├── 20_stored_procedures_triggers/
-│   ├── notes.md
-│   ├── stored_procedures.sql
-│   └── triggers.sql
-├── 21_indexes/
-│   ├── notes.md
+├── 17_stored_procedures/
+│   └── stored_procedures.sql
+├── 18_indexes/
 │   └── indexes.sql
-├── 22_partitions/
-│   ├── notes.md
+├── 19_partitions/
 │   └── partitions.sql
-├── 23_performance_best_practices/
-│   ├── notes.md
-│   └── performance_tips.sql
-├── 24_ai_sql/
-│   ├── notes.md
-│   └── prompts.sql
+├── 20_performance/
+│   └── performance.sql
+├── 21_ai_sql/
+│   └── ai_prompts.sql
 ├── projects/
 │   ├── data_warehouse/
-│   │   ├── planning.md
-│   │   ├── bronze/
-│   │   ├── silver/
-│   │   ├── gold/
-│   │   ├── models/
-│   │   └── scripts.sql
-│   ├── eda_project/
-│   │   ├── notes.md
-│   │   └── queries.sql
-│   ├── advanced_analytics_project/
-│   │   ├── notes.md
-│   │   └── queries.sql
-├── resources/
-│   ├── diagrams/
-│   └── datasets/
-└── LICENSE
+│   │   ├── bronze.sql
+│   │   ├── silver.sql
+│   │   └── gold.sql
+│   ├── eda/
+│   │   └── eda_queries.sql
+│   └── advanced_analytics/
+│       └── analytics.sql
+└── resources/
+    ├── datasets/
+    └── diagrams/
 ````
 </details>
 
