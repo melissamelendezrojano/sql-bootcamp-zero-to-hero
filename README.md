@@ -130,7 +130,7 @@ sql-bootcamp-zero-to-hero/
 ````
 </details>
 
-Each module contains:
+Most modules contains:
 
 -   `notes.md` — concept summaries
 -   `.sql` files — exercises and practice queries
