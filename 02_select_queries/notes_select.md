@@ -37,15 +37,13 @@ FROM customers;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 1  | Maria      | Germany | 350    |
-| 2  |  John      | USA     | 900    |
-| 3  | Georg      | UK      | 750    |
-| 4  | Martin     | Germany | 500    |
-| 5  | Peter      | USA     | 0      |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
+| 4  | Martin     | Germany | 500   |
+| 5  | Peter      | USA     | 0     |
 
 
 **SQL TASK:** Retrieve each customer's name, country and score
@@ -60,15 +58,13 @@ FROM customers;
 
 **- Results:**
 
-+------------+---------+--------+
-| first_name | country | score  |
-+------------+---------+--------+
-| Maria      | Germany | 350    |
-|  John      | USA     | 900    |
-| Georg      | UK      | 750    |
-| Martin     | Germany | 500    |
-| Peter      | USA     | 0      |
-+------------+---------+--------+
+| first_name | country | score |
+|------------|---------|-------|
+| Maria      | Germany | 350   |
+| John       | USA     | 900   |
+| Georg      | UK      | 750   |
+| Martin     | Germany | 500   |
+| Peter      | USA     | 0     |
 
 
 ## 4. WHERE 
@@ -90,14 +86,12 @@ WHERE score != 0;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 1  | Maria      | Germany | 350    |
-| 2  |  John      | USA     | 900    |
-| 3  | Georg      | UK      | 750    |
-| 4  | Martin     | Germany | 500    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
+| 4  | Martin     | Germany | 500   |
 
 
 **SQL TASK:** Retrieve customers from Germany
@@ -110,12 +104,10 @@ WHERE country = 'Germany';
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 1  | Maria      | Germany | 350    |
-| 4  | Martin     | Germany | 500    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
 
 
 ## 5. ORDER BY:
@@ -137,15 +129,13 @@ ORDER BY score DESC;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 2  |  John      | USA     | 900    |
-| 3  | Georg      | UK      | 750    |
-| 4  | Martin     | Germany | 500    |
-| 1  | Maria      | Germany | 350    |
-| 5  | Peter      | USA     | 0      |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
+| 4  | Martin     | Germany | 500   |
+| 1  | Maria      | Germany | 350   |
+| 5  | Peter      | USA     | 0     |
 
 
 **SQL TASK:** Retrieve all customers and sort the results by the lowest score first
@@ -158,15 +148,13 @@ ORDER BY score ASC;
 
 **-Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 5  | Peter      | USA     | 0      |
-| 1  | Maria      | Germany | 350    |
-| 4  | Martin     | Germany | 500    |
-| 3  | Georg      | UK      | 750    |
-| 2  |  John      | USA     | 900    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 5  | Peter      | USA     | 0     |
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+| 3  | Georg      | UK      | 750   |
+| 2  | John       | USA     | 900   |
 
 
 **SQL TASK:** Retrieve all customers and sort the results by the country and then by the highest score
@@ -179,15 +167,13 @@ ORDER BY country ASC, score DESC;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 4  | Martin     | Germany | 500    |
-| 1  | Maria      | Germany | 350    |
-| 3  | Georg      | UK      | 750    |
-| 2  |  John      | USA     | 900    |
-| 5  | Peter      | USA     | 0      |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 4  | Martin     | Germany | 500   |
+| 1  | Maria      | Germany | 350   |
+| 3  | Georg      | UK      | 750   |
+| 2  | John       | USA     | 900   |
+| 5  | Peter      | USA     | 0     |
 
 
 ## 6. GROUP BY
@@ -211,13 +197,11 @@ GROUP BY country;
 
 **- Results:**
 
-+---------+----------------+
-| country | country_score  |
-+---------+----------------+
-| Germany | 850            |
-| UK      | 750            |
-| USA     | 900            |
-+---------+----------------+
+| country | country_score |
+|---------|---------------|
+| Germany | 850           |
+| UK      | 750           |
+| USA     | 900           |
 
 
 **SQL TASK:** Find the total score and total number of customers for each country
@@ -233,13 +217,11 @@ GROUP BY country;
 
 **- Results:**
 
-+---------+---------------+------------------+
-| country | country_score | total_customers  |
-+---------+---------------+------------------+
-| Germany | 850           | 2                |
-| UK      | 750           | 1                |
-| USA     | 900           | 2                |
-+---------+---------------+------------------+
+| country | country_score | total_customers |
+|---------|---------------|-----------------|
+| Germany | 850           | 2               |
+| UK      | 750           | 1               |
+| USA     | 900           | 2               |
 
 
 ## 7. HAVING:
@@ -265,12 +247,10 @@ HAVING AVG(score) > 430;
 
 **- Results:**
 
-+---------+------------+
-| country | avg_score  |
-+---------+------------+
-| UK      | 750        |
-| USA     | 900        |
-+---------+------------+
+| country | avg_score |
+|---------|-----------|
+| UK      | 750       |
+| USA     | 900       |
 
 
 ## 8. DISTINCT
@@ -289,13 +269,11 @@ FROM customers;
 
 **- Results:**
 
-+----------+
-| country  |
-+----------+
-| Germany  |
-| UK       |
-| USA      |
-+----------+
+| country |
+|---------|
+| Germany |
+| UK      |
+| USA     |
 
 
 ## 9. TOP
@@ -315,13 +293,11 @@ FROM customers;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 1  | Maria      | Germany | 350    |
-| 2  |  John      | USA     | 900    |
-| 3  | Georg      | UK      | 750    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
 
 
 **SQL TASK:** Retrieve the top 3 customers with the highest scores
@@ -334,13 +310,11 @@ ORDER BY score DESC;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 2  |  John      | USA     | 900    |
-| 3  | Georg      | UK      | 750    |
-| 4  | Martin     | Germany | 500    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
+| 4  | Martin     | Germany | 500   |
 
 
 **SQL TASK:** Retrieve the lowest 2 customers based on the score
@@ -353,12 +327,10 @@ ORDER BY score ASC;
 
 **- Results:**
 
-+----+------------+---------+--------+
-| id | first_name | country | score  |
-+----+------------+---------+--------+
-| 5  | Peter      | USA     | 0      |
-| 1  | Maria      | Germany | 350    |
-+----+------------+---------+--------+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 5  | Peter      | USA     | 0     |
+| 1  | Maria      | Germany | 350   |
 
 
 **SQL TASK:** Get the two most recent orders
@@ -371,12 +343,10 @@ ORDER BY order_date DESC;
 
 **- Results:**
 
-+----------+-------------+------------+--------+
-| order_id | customer_id | order_date | sales  |
-+----------+-------------+------------+--------+
-| 1004     | 6           | 2021-08-31 | 10     |
-| 1003     | 3           | 2021-06-18 | 20     |
-+----------+-------------+------------+--------+
+| order_id | customer_id | order_date | sales |
+|----------|-------------|------------|-------|
+| 1004     | 6           | 2021-08-31 | 10    |
+| 1003     | 3           | 2021-06-18 | 20    |
 
 
 ## 10. CODING & EXECUTION ORDER
@@ -387,7 +357,9 @@ FROM and WHERE are executed first, followed by GROUP BY and HAVING.
 
 SELECT, ORDER BY, and finally TOP are executed at the end.
 
-![]()
+![Order query](/02_select_queries/coding_order_query.png)
+
+![execute_order](/02_select_queries/execute_order.png)
 
 ## 11. COOL SQL STUFF
 
