@@ -1,4 +1,4 @@
-# Section 1: SELECT Query
+# Section 2: SELECT Query
 
 
 ## 1. Components of SQL
