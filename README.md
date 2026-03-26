@@ -8,43 +8,44 @@ This repository includes structured notes, exercises, and SQL scripts developed 
 
 ## Current Progress
 
-**Progress: 2 / 28** sections completed
+**Progress: 4 / 28** sections completed
 
 ----------
 
 ## Course Sections
 
 
-| Section  | Topic |
-|----------|-------|
-|01| Introduction to SQL |
-|02|SELECT Queries|
-|03|DDL|
-|04|DML|
-|05|Filtering Data|
-|06|Joins|
-|07|Set Operators|
-|08|String Functions|
-|09|Date & Time Functions|
-|10|Null Functions|
-|11|CASE Expressions|
-|12|Window Functions (Basics)|
-|13|Window Aggregate Functions|
-|14|Window Ranking Functions|
-|15|Window Value Functions|
-|16|Subqueries|
-|17|CTEs|
-|18|Views|
-|19|CTAS & Temp Tables|
-|20|Stored Procedures & Triggers|
-|21|Indexes|
-|22|Partitions|
-|23|Performance Best Practices|
-|24|AI + SQL|
-|25|Data Warehouse Concepts|
-|26|Advanced Query Scenarios|
-|27|Optimization Labs|
-|28|Final Projects|
+| Section | Topic                        |
+|---------|------------------------------|
+| 01      | Introduction to SQL          |
+| 02      | SELECT Queries               |
+| 03      | DDL                          |
+| 04      | DML                          |
+| 05      | Filtering Data               |
+| 06      | Joins                        |
+| 07      | Set Operators                |
+| 08      | String Functions             |
+| 09      | Date & Time Functions        |
+| 10      | Null Functions               |
+| 11      | CASE Expressions             |
+| 12      | Window Functions (Basics)    |
+| 13      | Window Aggregate Functions   |
+| 14      | Window Ranking Functions     |
+| 15      | Window Value Functions       |
+| 16      | Subqueries                   |
+| 17      | CTEs                         |
+| 18      | Views                        |
+| 19      | CTAS & Temp Tables           |
+| 20      | Stored Procedures & Triggers |
+| 21      | Indexes                      |
+| 22      | Partitions                   |
+| 23      | Performance Best Practices   |
+| 24      | AI + SQL                     |
+| 25      | Data Warehouse Concepts      |
+| 26      | Advanced Query Scenarios     |
+| 27      | Optimization Labs            |
+| 28      | Final Projects               |
+
 
 ----------
 
