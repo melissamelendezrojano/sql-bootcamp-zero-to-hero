@@ -17,7 +17,6 @@ Queries read data without modifying tables or database structure, returning resu
 Each query is built using clauses that define how data is selected and processed.
 
 
-
 ## 3. SELECT & FROM
 
 SELECT defines which columns to retrieve, while FROM specifies the table where data comes from.
@@ -27,16 +26,11 @@ SQL executes queries logically starting from FROM, then applies SELECT to shape 
 Using `SELECT *` returns all columns, while listing columns allows precise data selection.
 
 
-
 **SQL TASK:** Retrieve all customer data.
 
-```sql
-SELECT *
-FROM customers;
-```
-
-**- Results:**
-
+<details>
+	<summary> Click to expand expected results.</summary>
+ 
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 1  | Maria      | Germany | 350   |
@@ -45,18 +39,22 @@ FROM customers;
 | 4  | Martin     | Germany | 500   |
 | 5  | Peter      | USA     | 0     |
 
+</details>
 
-**SQL TASK:** Retrieve each customer's name, country and score
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
-SELECT
-	first_name,
-	country,
-	score
+SELECT *
 FROM customers;
 ```
+</details>
+</p>
 
-**- Results:**
+**SQL TASK:** Retrieve each customer's name, country and score.
+
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | first_name | country | score |
 |------------|---------|-------|
@@ -65,6 +63,20 @@ FROM customers;
 | Georg      | UK      | 750   |
 | Martin     | Germany | 500   |
 | Peter      | USA     | 0     |
+
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT
+	first_name,
+	country,
+	score
+FROM customers;
+```
+</details>
 
 
 ## 4. WHERE 
@@ -78,13 +90,8 @@ It is written after FROM and before clauses like GROUP BY or ORDER BY.
 
 **SQL TASK:** Retrieve customers with score not equal to 0
 
-```sql
-SELECT *
-FROM customers
-WHERE score != 0;
-```
-
-**- Results:**
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | id | first_name | country | score |
 |----|------------|---------|-------|
@@ -92,22 +99,40 @@ WHERE score != 0;
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 | 4  | Martin     | Germany | 500   |
+</details>
 
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE score != 0;
+```
+</details>
+</p>
 
 **SQL TASK:** Retrieve customers from Germany
+
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE country = 'Germany';
 ```
-
-**- Results:**
-
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 4  | Martin     | Germany | 500   |
+</details>
+</p>
 
 
 ## 5. ORDER BY:
@@ -121,13 +146,8 @@ Multiple columns can be used to refine sorting when values are repeated.
 
 **SQL TASK:** Retrieve all customers and sort the results by the highest score first
 
-```sql
-SELECT *
-FROM customers
-ORDER BY score DESC;
-```
-
-**- Results:**
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | id | first_name | country | score |
 |----|------------|---------|-------|
@@ -136,44 +156,68 @@ ORDER BY score DESC;
 | 4  | Martin     | Germany | 500   |
 | 1  | Maria      | Germany | 350   |
 | 5  | Peter      | USA     | 0     |
+</details>
 
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+ORDER BY score DESC;
+```
+</details>
+</p>
 
 **SQL TASK:** Retrieve all customers and sort the results by the lowest score first
+
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 5  | Peter      | USA     | 0     |
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+| 3  | Georg      | UK      | 750   |
+| 2  | John       | USA     | 900   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 ORDER BY score ASC;
 ```
+</details>
+</p>
 
-**-Results:**
+**SQL TASK:** Retrieve all customers and sort the results by the country and then by the highest score
+
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | id | first_name | country | score |
 |----|------------|---------|-------|
-| 5  | Peter      | USA     | 0     |
-| 1  | Maria      | Germany | 350   |
 | 4  | Martin     | Germany | 500   |
+| 1  | Maria      | Germany | 350   |
 | 3  | Georg      | UK      | 750   |
 | 2  | John       | USA     | 900   |
+| 5  | Peter      | USA     | 0     |
+</details>
 
-
-**SQL TASK:** Retrieve all customers and sort the results by the country and then by the highest score
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 ORDER BY country ASC, score DESC;
 ```
-
-**- Results:**
-
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 4  | Martin     | Germany | 500   |
-| 1  | Maria      | Germany | 350   |
-| 3  | Georg      | UK      | 750   |
-| 2  | John       | USA     | 900   |
-| 5  | Peter      | USA     | 0     |
+</details>
+</p>
 
 
 ## 6. GROUP BY
@@ -187,6 +231,19 @@ Non-aggregated columns in SELECT must be included in the GROUP BY clause.
 
 **SQL TASK:** Find the total score for each country
 
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| country | country_score |
+|---------|---------------|
+| Germany | 850           |
+| UK      | 750           |
+| USA     | 900           |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
 ```sql
 SELECT
 	country,
@@ -194,17 +251,24 @@ SELECT
 FROM customers
 GROUP BY country;
 ```
-
-**- Results:**
-
-| country | country_score |
-|---------|---------------|
-| Germany | 850           |
-| UK      | 750           |
-| USA     | 900           |
+</details>
+</p>
 
 
 **SQL TASK:** Find the total score and total number of customers for each country
+
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| country | country_score | total_customers |
+|---------|---------------|-----------------|
+| Germany | 850           | 2               |
+| UK      | 750           | 1               |
+| USA     | 900           | 2               |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT 
@@ -214,14 +278,9 @@ SELECT
 FROM customers
 GROUP BY country;
 ```
+</details>
+</p>
 
-**- Results:**
-
-| country | country_score | total_customers |
-|---------|---------------|-----------------|
-| Germany | 850           | 2               |
-| UK      | 750           | 1               |
-| USA     | 900           | 2               |
 
 
 ## 7. HAVING:
@@ -235,6 +294,18 @@ WHERE filters rows **before** aggregation, HAVING filters groups **after** aggre
 
 **SQL TASK:** Find the average score for each country considering only customers with a score not equal to 0, and return only those countries with an average score greater than 430
 
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| country | avg_score |
+|---------|-----------|
+| UK      | 750       |
+| USA     | 900       |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
 ```sql
 SELECT 
 	country,
@@ -244,13 +315,9 @@ WHERE score != 0
 GROUP BY country
 HAVING AVG(score) > 430;
 ```
+</details>
+</p>
 
-**- Results:**
-
-| country | avg_score |
-|---------|-----------|
-| UK      | 750       |
-| USA     | 900       |
 
 
 ## 8. DISTINCT
@@ -262,18 +329,25 @@ It should be used only when duplicates exist, as it adds extra processing cost.
 
 **SQL TASK:** Return unique list of all countries
 
-```sql
-SELECT DISTINCT country
-FROM customers;
-```
-
-**- Results:**
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | country |
 |---------|
 | Germany |
 | UK      |
 | USA     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT DISTINCT country
+FROM customers;
+```
+</details>
+</p>
 
 
 ## 9. TOP
@@ -286,67 +360,92 @@ It is useful for top-N or bottom-N analysis.
 
 **SQL TASK:** Retrieve only 3 customers
 
-```sql
-SELECT TOP 3 *
-FROM customers;
-```
-
-**- Results:**
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 1  | Maria      | Germany | 350   |
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
+</details>
 
-
-**SQL TASK:** Retrieve the top 3 customers with the highest scores
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT TOP 3 *
-FROM customers
-ORDER BY score DESC;
+FROM customers;
 ```
+</details>
+</p>
 
-**- Results:**
+**SQL TASK:** Retrieve the top 3 customers with the highest scores
+
+<details>
+	<summary> Click to expand expected results.</summary>
 
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 | 4  | Martin     | Germany | 500   |
+</details>
 
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT TOP 3 *
+FROM customers
+ORDER BY score DESC;
+```
+</details>
+</p>
 
 **SQL TASK:** Retrieve the lowest 2 customers based on the score
+
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 5  | Peter      | USA     | 0     |
+| 1  | Maria      | Germany | 350   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT TOP 2 *
 FROM customers
 ORDER BY score ASC;
 ```
-
-**- Results:**
-
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 5  | Peter      | USA     | 0     |
-| 1  | Maria      | Germany | 350   |
-
+</details>
+</p>
 
 **SQL TASK:** Get the two most recent orders
+
+<details>
+	<summary> Click to expand expected results.</summary>
+
+| order_id | customer_id | order_date | sales |
+|----------|-------------|------------|-------|
+| 1004     | 6           | 2021-08-31 | 10    |
+| 1003     | 3           | 2021-06-18 | 20    |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT TOP 2 *
 FROM orders
 ORDER BY order_date DESC;
 ```
-
-**- Results:**
-
-| order_id | customer_id | order_date | sales |
-|----------|-------------|------------|-------|
-| 1004     | 6           | 2021-08-31 | 10    |
-| 1003     | 3           | 2021-06-18 | 20    |
+</details>
+</p>
 
 
 ## 10. CODING & EXECUTION ORDER
@@ -357,9 +456,36 @@ FROM and WHERE are executed first, followed by GROUP BY and HAVING.
 
 SELECT, ORDER BY, and finally TOP are executed at the end.
 
-![Order query](/02_select_queries/coding_order_query.png)
+<table>
+<tr>
+<td width="50%">
+<strong>Coding order</strong> 
+</p>
 
-![execute_order](/02_select_queries/execute_order.png)
+```sql
+SELECT DISTINCT TOP 2 
+	Col1,
+	SUM(Col2)
+FROM Table
+WHERE Col = 10
+GROUP BY Col1
+HAVING SUM(Col2) > 30
+ORDER BY Col1 DESC;
+```
+</td> <td width=50%">
+
+|   | Execute order   |
+|---|-----------------|
+| 1 | FROM            |
+| 2 | WHERE           |
+| 3 | GROUP BY        |
+| 4 | HAVING          |
+| 5 | SELECT DISTINCT |
+| 6 | ORDER BY        |
+| 7 | TOP             |
+</td></tr></table>
+
+
 
 ## 11. COOL SQL STUFF
 
