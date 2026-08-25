@@ -1,0 +1,68 @@
+# ==========================================
+# SQL Zero to Hero - .gitignore
+# ==========================================
+
+# --- Operating System ---
+
+# Windows
+desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+
+# --- IDEs / Editors ---
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains
+.idea/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+
+# --- Temporary / Backup files ---
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+
+# --- Logs ---
+
+*.log
+
+
+# --- Python ---
+
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+
+# --- Environment variables / Secrets ---
+
+.env
+.env.*
+!.env.example
+
+
+# --- Database files generated locally ---
+
+# SQLite
+*.sqlite
+*.sqlite3
+*.db
+
+# Local database dumps / backups
+*.dump
+*.bak.sql
