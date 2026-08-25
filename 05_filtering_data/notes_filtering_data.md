@@ -29,95 +29,143 @@ CONDITION --> Expression - `Operator` - Expression
 
 **SQL TASK:** Retrieve all customers from Germany
 
-```sql
-SELECT *
-FROM customers
-WHERE country = 'Germany'
-```
-
-**Results:**
+<details>
+	<summary> Click to expand expected results.</summary>
+ 
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 1  | Maria      | Germany | 350   |
 | 4  | Martin     | Germany | 500   |
 
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE country = 'Germany'
+```
+</details>
+</p>
 
 **SQL TASK:** Retrieve all customers who are not from Germany
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
+| 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE country <> 'Germany'
 ```
+</details>
+</p>
 
-**Results:**
+
+**SQL TASK:** Retrieve all customers with a score greater than 500
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
-| 5  | Peter      | USA     | 0     |
+</details>
 
-
-**SQL TASK:** Retrieve all customers with a score greater than 500
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE score > 500
 ```
+</details>
+</p>
 
-**Results:**
+
+**SQL TASK:** Retrieve all customers with a score of 500 or more
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
+| 4  | Martin     | Germany | 500   |
+</details>
 
-
-**SQL TASK:** Retrieve all customers with a score of 500 or more
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE score >= 500
 ```
-
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 2  | John       | USA     | 900   |
-| 3  | Georg      | UK      | 750   |
-| 4  | Martin     | Germany | 500   |
+</details>
+</p>
 
 
 **SQL TASK:** Retrieve all customers with a score less than 500
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE score < 500
 ```
-
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 5  | Peter      | USA     | 0     |
+</details>
+</p>
 
 
 **SQL TASK:** Retrieve all customers with a score of 500 or less
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+| 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE score <= 500
 ```
-
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 4  | Martin     | Germany | 500   |
-| 5  | Peter      | USA     | 0     |
+</details>
+</p>
 
 
 ## 2. AND Operator
@@ -130,16 +178,24 @@ This operator is commonly used when applying multiple filters that must all be s
 
 **SQL TASK:** Retrieve all customers who are from the USA AND have a score greater than 500
 
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 2  | John       | USA     | 900   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
 ```sql
 SELECT *
 FROM customers
 WHERE country = 'USA' AND score > 500
 ```
-
-**Result:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 2  | John       | USA     | 900   |
+</details>
+</p>
 
 
 ## 3. OR Operator
@@ -150,18 +206,26 @@ The `OR` operator allows combining multiple conditions where **at least one must
 
 **SQL TASK:** Retrieve all customers who are either from the USA OR have a score greater than 500
 
-```sql
-SELECT *
-FROM customers
-WHERE country = 'USA' OR score > 500
-```
+<details>
+    <summary> Click to expand expected results.</summary>
 
-**Results:**
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 | 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE country = 'USA' OR score > 500
+```
+</details>
+</p>
 
 
 ## 4. NOT Operator
@@ -172,18 +236,26 @@ The `NOT` operator reverses the result of a condition, turning true into false a
 
 **SQL TASK:** Retrieve all customers with a score NOT less than 500
 
-```sql
-SELECT *
-FROM customers
-WHERE NOT score < 500
-```
+<details>
+    <summary> Click to expand expected results.</summary>
 
-**Results:**
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 | 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE NOT score < 500
+```
+</details>
+</p>
 
 
 ## 5. BETWEEN Operator
@@ -196,6 +268,18 @@ It simplifies range conditions but can also be replaced by combining comparison 
 
 **SQL TASK:** Retrieve all customers whose score falls in the range between 100 and 500
 
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
 ```sql
 SELECT *
 FROM customers
@@ -207,12 +291,8 @@ SELECT *
 FROM customers
 WHERE score >= 100 AND score <= 500
 ```
-
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 4  | Martin     | Germany | 500   |
+</details>
+</p>
 
 
 ## 7. IN Operator
@@ -223,19 +303,27 @@ The `IN` operator tests whether a value exists within a predefined list of value
 
 **SQL TASK:** Retrieve all customers from either Germany or USA
 
-```sql
-SELECT *
-FROM customers
-WHERE country IN ('Germany', 'USA')
-```
+<details>
+    <summary> Click to expand expected results.</summary>
 
-**Results:**
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 1  | Maria      | Germany | 350   |
 | 2  | John       | USA     | 900   |
 | 4  | Martin     | Germany | 500   |
 | 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE country IN ('Germany', 'USA')
+```
+</details>
+</p>
 
 
 ## 8. LIKE Operators
@@ -248,58 +336,93 @@ This operator is essential for flexible searches, such as finding values that st
 
 **SQL TASK:** Find all customers whose first name starts with 'M'
 
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
 ```sql
 SELECT *
 FROM customers
 WHERE first_name LIKE 'M%'
 ```
+</details>
+</p>
 
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 4  | Martin     | Germany | 500   |
 
 **SQL TASK:** Find all customers whose first name ends with 'n'
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 2  | John       | USA     | 900   |
+| 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE first_name LIKE '%n'
 ```
+</details>
+</p>
 
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 2  | John       | USA     | 900   |
-| 4  | Martin     | Germany | 500   |
 
 **SQL TASK:** Find all customers whose first name contains 'r'
 
-```sql
-SELECT *
-FROM customers
-WHERE first_name LIKE '%r%'
-```
+<details>
+    <summary> Click to expand expected results.</summary>
 
-**Results:**
 | id | first_name | country | score |
 |----|------------|---------|-------|
 | 1  | Maria      | Germany | 350   |
 | 3  | Georg      | UK      | 750   |
 | 4  | Martin     | Germany | 500   |
 | 5  | Peter      | USA     | 0     |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
+
+```sql
+SELECT *
+FROM customers
+WHERE first_name LIKE '%r%'
+```
+</details>
+</p>
+
 
 **SQL TASK:** Find all customers whose first name has 'r' in the third position
+
+<details>
+    <summary> Click to expand expected results.</summary>
+
+| id | first_name | country | score |
+|----|------------|---------|-------|
+| 1  | Maria      | Germany | 350   |
+| 4  | Martin     | Germany | 500   |
+</details>
+
+<details>
+	<summary> Click to expand answer.</summary>
 
 ```sql
 SELECT *
 FROM customers
 WHERE first_name LIKE '__r%'
 ```
-
-**Results:**
-| id | first_name | country | score |
-|----|------------|---------|-------|
-| 1  | Maria      | Germany | 350   |
-| 4  | Martin     | Germany | 500   |
+</details>
+</p>
