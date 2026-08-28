@@ -19,6 +19,7 @@ INNER JOIN orders
 ON id = customer_id
 
 -- That works, but it's not standard best practice.
+
 SELECT
 	id,
 	first_name,
@@ -29,6 +30,7 @@ INNER JOIN orders
 ON id = customer_id
 
 -- Best practice:
+
 SELECT
 	c.id,
 	c.first_name,
@@ -153,6 +155,31 @@ WHERE o.customer_id IS NOT NULL
 
 -- CROSS JOIN
 
+-- SQL TASK: Generate all possible combinations of customers and orders
+
 SELECT *
 FROM customers
 CROSS JOIN orders
+
+-- MULTIPLE TABLE JOINS
+
+/* SQL TASK: Using SalesDB, retrieve a list of all orders, along with the related customer, product, and 
+employee details.*/
+
+SELECT 
+	O.OrderID,
+	O.Sales,
+	C.FirstName AS Customer_FirstName,
+	C.LastName AS Customer_LastName,
+	P.Product,
+	P.Price,
+	E.FirstName AS Salesperson_FirstName,
+	E.LastName AS Salesperson_LastName
+FROM Sales.Orders AS O
+LEFT JOIN Sales.Customers AS C
+ON O.CustomerID = C.CustomerID
+LEFT JOIN Sales.products AS P
+ON O.ProductID = P.ProductID
+LEFT JOIN Sales.Employees AS E
+ON O.SalesPersonID= E.EmployeeID
+
