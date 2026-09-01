@@ -8,7 +8,7 @@ This repository includes structured notes, exercises, and SQL scripts developed 
 
 ## Current Progress
 
-**Progress: 5 / 28** sections completed
+**Progress: 7 / 28** sections completed
 
 ----------
 
